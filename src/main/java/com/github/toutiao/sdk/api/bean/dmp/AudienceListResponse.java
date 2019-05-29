@@ -1,0 +1,43 @@
+package com.github.toutiao.sdk.api.bean.dmp;
+
+import com.github.toutiao.sdk.api.bean.ToutiaoResponse;
+import lombok.Data;
+
+
+
+import java.util.List;
+
+@Data
+public class AudienceListResponse extends ToutiaoResponse<AudienceListResponse.Data> {
+
+    @lombok.Data
+    public static class Data {
+        List<Audience> custom_audience_list;
+    }
+
+    @lombok.Data
+    public static class Audience {
+
+        String id;
+        Long custom_audience_id;
+        String isdel;
+        String data_source_id;
+        String name;
+        String source;
+        Integer status;
+        Long cover_num;
+        Long upload_num;
+        String tag;
+        Long create_time;
+        Long modify_time;
+        Integer push_status;
+
+        Long adverid;
+        Long agentid;
+        String createTime;
+        String updateTime;
+        String ossKey;
+        Integer deviceType;
+        String remarks;
+    }
+}
